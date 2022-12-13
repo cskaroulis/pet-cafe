@@ -10,7 +10,7 @@ function App() {
   useEffect(
     () => {
       try {
-        const endpoint = "http://localhost:5000/";
+        const endpoint = process.env.REACT_APP_API_ENDPOINT;
         fetch(endpoint + "?id=WsdlvVNLjcpXFPYF3ZOo")
           .then((response) => response.json())
           .then((data) => {
